@@ -1,0 +1,103 @@
+
+(rules PCB BlueBoardRL78G13_Extension
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1276)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.2)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 254.0)
+    (clear 203.4)
+    (clear 127.0 (type smd_to_turn_gap))
+    (clear 50.8 (type smd_smd))
+  )
+  (padstack "Via[0-1]_609.6:304.8_um"
+    (shape
+      (circle F.Cu 609.6 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 609.6 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_609.6:304.8_um" "Via[0-1]_609.6:304.8_um" default
+  )
+  (via 
+    "Via[0-1]_609.6:304.8_um-kicad_default" "Via[0-1]_609.6:304.8_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_609.6:304.8_um-Power" "Via[0-1]_609.6:304.8_um" Power
+  )
+  (via_rule
+    default "Via[0-1]_609.6:304.8_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_609.6:304.8_um-kicad_default"
+  )
+  (via_rule
+    Power "Via[0-1]_609.6:304.8_um-Power"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(C2-Pad2)" "Net-(C2-Pad1)" "Net-(C3-Pad1)" "Net-(F1-Pad2)" "Net-(J1-Pad64)" "YMZ294_CLK" "SW_A" "SW_B"
+    "BT_TX" "BT_RX" "Net-(J1-Pad58)" "Net-(J1-Pad57)" "Net-(J1-Pad56)" "Net-(J1-Pad55)" "Net-(J1-Pad54)" "POS_H"
+    "POS_V" Temp Light "Net-(J1-Pad49)" "AMP_CE" "Net-(J1-Pad47)" "LED_1" "LED_2"
+    "LED_3" "LED_4" "LED_5" "LED_6" "LED_7" "LED_8" "Net-(J1-Pad38)" "Net-(J1-Pad37)"
+    "Net-(J1-Pad36)" "Net-(J1-Pad35)" "Net-(J1-Pad34)" "Net-(J1-Pad33)" "Net-(J1-Pad32)" "SW_C" "SW_D" "YMZ294_D0"
+    "YMZ294_D1" "YMZ294_D2" "YMZ294_D3" "YMZ294_D4" "YMZ294_D5" "YMZ294_D6" "YMZ294_D7" "Net-(J1-Pad21)"
+    "Net-(J1-Pad20)" "Net-(J1-Pad19)" "OLED_SDA" "OLED_SCL" "Net-(J1-Pad16)" "Net-(J1-Pad14)" "Net-(J1-Pad12)" "Net-(J1-Pad11)"
+    "Net-(J1-Pad10)" "Net-(J1-Pad9)" "Net-(J1-Pad8)" "Net-(J1-Pad7)" "Net-(J1-Pad6)" "Net-(J1-Pad5)" "YMZ294_WR" "YMZ294_CS"
+    "YMZ294_A0" "Net-(J1-Pad1)" "Net-(LED1-Pad2)" "Net-(LED1-Pad1)" "Net-(LED2-Pad2)" "Net-(LED2-Pad1)" "Net-(LED3-Pad2)" "Net-(LED3-Pad1)"
+    "Net-(LED4-Pad2)" "Net-(LED4-Pad1)" "Net-(LED5-Pad2)" "Net-(LED5-Pad1)" "Net-(LED6-Pad2)" "Net-(LED6-Pad1)" "Net-(LED7-Pad2)" "Net-(LED7-Pad1)"
+    "Net-(LED8-Pad2)" "Net-(LED8-Pad1)" "Net-(LED9-Pad1)" /Sound
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 254.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class Power
+    +5V GND "/SP-" /SP+
+    (clearance_class Power)
+    (via_rule Power)
+    (rule
+      (width 508.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

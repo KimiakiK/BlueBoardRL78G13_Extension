@@ -1,0 +1,23 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ECS-5032MV
+D HCMOS Crystal Clock Oscillator, 5.0x3.2 mm SMD
+K Crystal Clock Oscillator ECS SMD
+$ENDCMP
+#
+$CMP LM60
+D Low power, analog thermistor temperature sensor, -25C to +125C, in SOT-23
+K temperature sensor thermistor
+$ENDCMP
+#
+$CMP RL78G13_64pin_Connector
+D RL78 G13 64pin (R5F100LEA) Connector
+K RL78 G13 64pin (R5F100LEA) Connector
+$ENDCMP
+#
+$CMP YMZ294
+D YAMAHA SOUND
+K YMZ294 YAMAHA SOUND
+$ENDCMP
+#
+#End Doc Library
