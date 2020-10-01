@@ -182,8 +182,8 @@ void DrvYMZ294SetVolume(uint8_t channel, uint8_t volume)
 void DrvYMZ294SetFrequency(uint8_t channel, uint8_t freq_table_index)
 {
 	if ((channel < YMZ294_CH_NUM) && (freq_table_index >= YMZ294_FREQ_TABLE_MIN) && (freq_table_index < YMZ294_FREQ_TABLE_MAX)){
-		writeRegister(YMZ294_ADDR_FREQ + YMZ294_ADDR_L + channel, YMZ294_Freq_Table_L[freq_table_index]);
-		writeRegister(YMZ294_ADDR_FREQ + YMZ294_ADDR_H + channel, YMZ294_Freq_Table_H[freq_table_index]);
+		writeRegister(YMZ294_ADDR_FREQ + YMZ294_ADDR_L + channel * 2, YMZ294_Freq_Table_L[freq_table_index]);
+		writeRegister(YMZ294_ADDR_FREQ + YMZ294_ADDR_H + channel * 2, YMZ294_Freq_Table_H[freq_table_index]);
 	}
 }
 
